@@ -13,15 +13,15 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(email, password);
-      navigate('/dashboard'); // Redirect to dashboard after login
+      navigate('/dashboard'); 
     } catch (error) {
       alert('Login failed');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginTop: '50px' }}> {/* Inline style example */}
-      <h2>Login</h2>
+    <form onSubmit={handleSubmit} style={{ marginTop: '50px' }} className='mt-80'> {/* Inline style example */}
+      <h2 className='text-[50px]'>Login</h2>
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
       <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
       <button type="submit">Login</button>
